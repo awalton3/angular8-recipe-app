@@ -1,0 +1,13 @@
+<mat-drawer-container [hasBackdrop]="true" style="height: 100vh">
+  <mat-drawer #drawer [mode]="over" class="sideDrawer">
+    <mat-nav-list style="width:100%">
+      <a style="width: 100%" mat-list-item routerLink="/" class="brand" (click)="drawer.close()">RECIPE BOOK</a>
+      <a mat-list-item routerLink="/recipes" class="sideDrawer-links" (click)="drawer.close()">Recipes</a>
+      <a mat-list-item routerLink="/shopping-list" class="sideDrawer-links" (click)="drawer.close()">Shopping List</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content style="padding: 0">
+    <app-nav (toggledDrawer)="drawer.open()" style="width: 100vw"></app-nav>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

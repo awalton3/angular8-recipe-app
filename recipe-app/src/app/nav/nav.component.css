@@ -1,0 +1,10 @@
+.brand {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #00B3B3;
+}
+
+i {
+  color: #00B3B3;
+  margin: 0px 5px;
+}
