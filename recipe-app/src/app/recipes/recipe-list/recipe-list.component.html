@@ -1,0 +1,3 @@
+<mat-nav-list>
+  <app-recipe-list-item *ngFor="let recipe of recipes; let recipeId = index" [recipeId]="recipeId" (click)="onRecipeClick(recipeId)"></app-recipe-list-item>
+</mat-nav-list>

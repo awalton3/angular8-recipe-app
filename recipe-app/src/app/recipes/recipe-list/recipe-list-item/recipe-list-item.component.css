@@ -1,0 +1,20 @@
+.recipe-list-item {
+  height: 105px;
+  width: 500px;
+  border: 1px solid #e1e1e1;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+.recipe-list-item--BottomBorder {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.recipe-list-item-image {
+  width: 120px;
+  height: 100px;
+}
+
+:host /deep/ .mat-list-item-content {
+  padding-right: 0!important;
+}

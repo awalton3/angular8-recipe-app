@@ -8,13 +8,21 @@ import { MaterialComponentsModule } from './shared/material-components.module';
 import { NavComponent } from './nav/nav.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeListItemComponent } from './recipes/recipe-list/recipe-list-item/recipe-list-item.component';
+import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     RecipesComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    RecipeEditComponent,
+    RecipeListComponent,
+    RecipeListItemComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     BrowserModule,

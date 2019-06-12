@@ -1,0 +1,19 @@
+.recipe-details-image {
+  width: 450px;
+  height: 300px;
+}
+
+.recipe-details-title {
+  color: #B34200;
+  font-weight: 700;
+}
+
+.recipe-details-description {
+  margin-top: -15px;
+  color: grey;
+}
+
+i {
+  color: #00B3B3;
+  margin: 0px 5px;
+}

@@ -1,0 +1,9 @@
+<mat-list-item [ngClass]="{'recipe-list-item--BottomBorder': recipeId === totalNumRecipes}" class="recipe-list-item">
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxFill>
+    <div>
+      <h3 style="color: #B34200; font-weight: 400">{{ recipe.name }}</h3>
+      <p style="color: grey; margin-top: -10px">{{ recipe.description }}</p>
+    </div>
+    <img src="{{ recipe.imageUrl }}"  class="recipe-list-item-image" alt="{{ recipe.name }}">
+  </div>
+</mat-list-item>

@@ -5,6 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import {OverlayModule} from '@angular/cdk/overlay';
+
+
 
 
 @NgModule({
@@ -14,7 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    OverlayModule
   ],
   exports: [
     MatToolbarModule,
@@ -22,7 +26,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    OverlayModule
   ],
 })
 
