@@ -1,3 +1,21 @@
-<p>
-  recipe-edit works!
-</p>
+<div class="recipe-edit-form">
+  <form [formGroup]="recipeEditForm" (ngSubmit)="onSubmitRecipeForm()" fxLayout="column" fxLayoutAlign="start start">
+    <h2>Recipe Details</h2>
+    <img src="" alt="">
+    <mat-form-field class="recipe-edit-input">
+      <input matInput formControlName="name" placeholder="Name" type="text" name="name">
+    </mat-form-field>
+    <mat-form-field class="recipe-edit-input">
+      <textarea matInput formControlName="description" placeholder="Description" type="text" name="description">
+      </textarea>
+    </mat-form-field>
+    <mat-form-field class="recipe-edit-input">
+      <textarea matInput formControlName="imagePath" placeholder="Image Url" type="text" name="imagePath" rows="4">
+      </textarea>
+    </mat-form-field>
+  </form>
+  <h3>Ingredients</h3>
+  <app-shopping-list-manage *ngIf="mode === 'edit'" [parent]="'recipe-edit'" [recipeIdToEdit]="id"></app-shopping-list-manage>
+  <app-shopping-list-manage *ngIf="mode === 'new'" [parent]="'recipe-edit'"></app-shopping-list-manage>
+  shopping
+</div>

@@ -2,8 +2,8 @@
   <mat-drawer #drawer [mode]="over" class="sideDrawer">
     <mat-nav-list style="width:100%">
       <a style="width: 100%" mat-list-item routerLink="/" class="brand" (click)="drawer.close()">RECIPE BOOK</a>
-      <a mat-list-item routerLink="/recipes" class="sideDrawer-links" (click)="drawer.close()">Recipes</a>
-      <a mat-list-item routerLink="/shopping-list" class="sideDrawer-links" (click)="drawer.close()">Shopping List</a>
+      <a mat-list-item routerLink="/recipes" routerLinkActive="link-active" class="sideDrawer-links" (click)="drawer.close()">Recipes</a>
+      <a mat-list-item routerLink="/shopping-list" routerLinkActive="link-active" class="sideDrawer-links" (click)="drawer.close()">Shopping List</a>
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content style="padding: 0">

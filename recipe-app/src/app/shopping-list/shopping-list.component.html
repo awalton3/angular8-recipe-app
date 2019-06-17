@@ -1,3 +1,33 @@
-<p>
-  shopping-list works!
-</p>
+<div class="shopping-list-component">
+  <h2 class="title">Shopping List</h2>
+  <mat-divider></mat-divider>
+  <app-shopping-list-manage [parent]="'shopping-list'" [ingredientIdToEdit]="ingredientToEdit"></app-shopping-list-manage>
+  <div *ngIf="ingredients.length !== 0">
+    <mat-selection-list #ingreds>
+      <mat-list-option *ngFor="let ingredient of ingredients; let i = index" value="{{ i }}">
+        {{ ingredient.name }} | {{ ingredient.quantity }}
+      </mat-list-option>
+    </mat-selection-list>
+    <br>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <button *ngIf="!allSelected" mat-button (click)="onSelectAll()" class="selectall-btn">
+        SELECT ALL ITEMS
+      </button>
+      <button *ngIf="allSelected" mat-button (click)="onDeselectAll()" class="selectall-btn">
+        DESELECT ALL ITEMS
+      </button>
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <button mat-button (click)="onDeleteItems()" [disabled]="ingreds.selectedOptions.selected.length === 0">
+          <i class="material-icons" [ngClass]="{'active': ingreds.selectedOptions.selected.length !== 0, 'disabled': ingreds.selectedOptions.selected.length === 0}">delete</i>
+        </button>
+        <button mat-button (click)="onEditItems(+ingreds.selectedOptions.selected[0].value)" [disabled]="ingreds.selectedOptions.selected.length === 0">
+          <i class="material-icons"
+          [ngClass]="{
+            'active': ingreds.selectedOptions.selected.length === 1,
+            'disabled': ingreds.selectedOptions.selected.length !== 1
+          }">edit</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

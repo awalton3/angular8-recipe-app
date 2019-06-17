@@ -31,6 +31,8 @@ export class RecipeListComponent implements OnInit {
     [ new Ingredient ('head of lettuce', 1), new Ingredient ('tomatos', 2), new Ingredient ('shredded cheese', 1), new Ingredient ('taco soft shells', 24), new Ingredient ('chicken breast', 1) ]
   )
 
+  recipesEmpty: boolean = false;
+
   constructor(
     private recipeService: RecipeService,
     private route : ActivatedRoute,
@@ -43,6 +45,9 @@ export class RecipeListComponent implements OnInit {
     this.recipeService.addRecipe(this.recipe2)
     this.recipeService.addRecipe(this.recipe3)
     this.recipes = this.recipeService.getRecipes()
+    if (this.recipeService.getTotalNumRecipes() === 0) {
+      this.recipesEmpty = true;
+    }
   }
 
   onRecipeClick(recipeId: any) {

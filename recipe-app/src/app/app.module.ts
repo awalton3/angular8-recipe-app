@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeListItemComponent } from './recipes/recipe-list/recipe-list-item/recipe-list-item.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
+import { RecipeEmptyComponent } from './recipes/recipe-empty/recipe-empty.component';
+import { ShoppingListManageComponent } from './shopping-list/shopping-list-manage/shopping-list-manage.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.
     RecipeEditComponent,
     RecipeListComponent,
     RecipeListItemComponent,
-    RecipeDetailsComponent
+    RecipeDetailsComponent,
+    RecipeEmptyComponent,
+    ShoppingListManageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialComponentsModule
   ],

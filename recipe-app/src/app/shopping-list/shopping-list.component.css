@@ -1,0 +1,30 @@
+.shopping-list-component {
+  margin: 80px;
+}
+
+.title {
+  color: #B34200;
+  font-weight: 500;
+  text-transform: uppercase
+}
+
+.delete-btn {
+  color: red
+}
+
+.selectall-btn {
+  color: #00B3B3
+}
+
+
+i.active {
+  color: #00B3B3;
+  padding: 0px 5px;
+  vertical-align: middle
+}
+
+i.disabled {
+  color: #D4D4D4;
+  padding: 0px 5px;
+  vertical-align: middle
+}

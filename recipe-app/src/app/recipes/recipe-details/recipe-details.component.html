@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="start start">
+<div *ngIf="recipe" fxLayout="column" fxLayoutAlign="start start">
   <div><img src="{{ recipe.imageUrl }}" alt="{{ recipe.name }}" class="recipe-details-image"></div>
   <div fxLayout="row" fxLayoutAlign="space-between center" fxFill>
     <div>
@@ -8,9 +8,9 @@
     <div>
       <button mat-button [matMenuTriggerFor]="menu" style="color: grey; font-weight: 200; font-size: 15px">MANAGE<i class="material-icons">expand_more</i></button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Add to shopping list</button>
-        <button mat-menu-item>Edit</button>
-        <button mat-menu-item>Delete</button>
+        <button mat-menu-item (click)="onAddToShoppingList()">Add to shopping list</button>
+        <button mat-menu-item (click)="onEditRecipe()">Edit</button>
+        <button mat-menu-item (click)="onDeleteRecipe()">Delete</button>
       </mat-menu>
     </div>
   </div>

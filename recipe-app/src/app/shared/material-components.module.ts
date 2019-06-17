@@ -5,10 +5,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import {OverlayModule} from '@angular/cdk/overlay';
-
-
-
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   imports: [
@@ -18,7 +18,11 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatListModule,
     MatMenuModule,
     MatButtonModule,
-    OverlayModule
+    OverlayModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
+
   ],
   exports: [
     MatToolbarModule,
@@ -27,7 +31,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatListModule,
     MatMenuModule,
     MatButtonModule,
-    OverlayModule
+    OverlayModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
 })
 

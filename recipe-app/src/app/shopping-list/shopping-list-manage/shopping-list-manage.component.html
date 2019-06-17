@@ -1,0 +1,16 @@
+<form class="shopping-list-form" (ngSubmit)="onSubmit()" #f="ngForm">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field class="shopping-list-input-field" [color]="'secondary'">
+      <input matInput placeholder="Ingredient Name" type="text" name="name" ngModel required>
+    </mat-form-field>
+    <mat-form-field class="shopping-list-input-field" [color]="primary">
+      <input matInput placeholder="Quantity" type="number" name="quantity" ngModel required>
+    </mat-form-field>
+    <button *ngIf="!isEditMode" mat-icon-button type="submit" [disabled]="!f.valid">
+      <i class="material-icons" [ngClass]="{'active': f.valid, 'disabled': !f.valid}">add</i>
+    </button>
+    <button *ngIf="isEditMode" mat-icon-button type="submit" [disabled]="!f.valid">
+      <i class="material-icons" [ngClass]="{'active': f.valid, 'disabled': !f.valid}">done</i>
+    </button>
+  </div>
+</form>

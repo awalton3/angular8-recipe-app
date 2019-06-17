@@ -1,3 +1,12 @@
-<mat-nav-list>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <h2 style="color: #B34200">MY RECIPES</h2>
+  <button mat-fab style="background-color: #00B3B3" [routerLink]="['new']">
+    <i class="material-icons" fxLayoutAlign="center center">add</i>
+  </button>
+</div>
+<br><br>
+<mat-divider></mat-divider>
+<br><br>
+<mat-nav-list *ngIf="!recipesEmpty">
   <app-recipe-list-item *ngFor="let recipe of recipes; let recipeId = index" [recipeId]="recipeId" (click)="onRecipeClick(recipeId)"></app-recipe-list-item>
 </mat-nav-list>

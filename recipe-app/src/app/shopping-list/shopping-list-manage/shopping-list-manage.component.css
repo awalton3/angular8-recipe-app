@@ -1,0 +1,20 @@
+.shopping-list-input-field {
+  margin: 30px 15px;
+}
+.shopping-list-form {
+  min-width: 150px;
+  max-width: 60vw;
+  width: 100%;
+}
+
+i.active {
+  color: #00B3B3;
+  padding: 5px;
+  vertical-align: middle
+}
+
+i.disabled {
+  color: #D4D4D4;
+  padding: 5px;
+  vertical-align: middle
+}
